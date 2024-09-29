@@ -1,0 +1,104 @@
+@import '../../../../styles/styles.scss';
+
+.container {
+  padding-inline: 18px;
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    'header header'
+    'main main'
+    'button1 button2'
+    'buttonMain buttonMain';
+
+  @include on-tablet {
+    grid-template-areas:
+      'header header header'
+      'button1 main button2'
+      'buttonMain buttonMain buttonMain';
+  }
+
+  @include gap-btw-blocks;
+}
+
+.header {
+  padding-bottom: 24px;
+  grid-area: header;
+
+  @include on-tablet {
+    padding-bottom: 32px;
+  }
+}
+
+.articles {
+  grid-area: main;
+  display: flex;
+  overflow: hidden;
+  gap: 16px;
+  width: $news-card-width;
+
+  @include on-tablet {
+    width: calc($news-card-width * 2);
+  }
+
+  @include on-desktop {
+    width: calc($news-card-width-desktop * 2);
+  }
+
+  & > * {
+    flex-shrink: 0;
+    flex-grow: 1;
+  }
+}
+
+.button {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  grid-area: button2;
+  justify-self: end;
+
+  &:hover {
+    box-shadow: 0px 1px 4px 0px #0c0c0d1a;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  & > div {
+    height: 20px;
+    width: 10px;
+  }
+
+  &__left {
+    grid-area: button1;
+    justify-self: start;
+
+    & :first-child {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.mainButton {
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid $yellow;
+  border-radius: 24px;
+  grid-area: buttonMain;
+  text-decoration: none;
+  color: $black;
+  margin-top: 24px;
+
+  @include on-tablet {
+    margin-top: 32px;
+  }
+}

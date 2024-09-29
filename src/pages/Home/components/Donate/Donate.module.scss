@@ -1,0 +1,35 @@
+@import '../../../../styles/styles';
+
+.container {
+  background-image: url(../../../../imgs/donate/donate-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-block: 48px;
+  padding-inline: 42px;
+  color: $white;
+  text-align: center;
+
+  @include on-tablet {
+    padding-block: 70px;
+    padding-inline: 100px;
+    background-image: url(../../../../imgs/donate/donate-bg-tablet.png);
+  }
+
+  @include on-desktop {
+    background-image: url(../../../../imgs/donate/donate-bg-desktop.png);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+
+  @include gap-btw-blocks;
+}
+
+.img {
+  height: 500px;
+  padding-block: 25px;
+  object-position: center;
+}

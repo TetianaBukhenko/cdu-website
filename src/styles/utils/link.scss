@@ -1,0 +1,40 @@
+.link {
+  position: relative;
+  color: $white;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: $yellow;
+    transform: scale(0);
+    transition: all 2s;
+    bottom: -5px;
+    left: 0;
+  }
+
+  &:hover {
+    color: $yellow;
+  }
+
+  &:hover::after {
+    transform: scale(1);
+    transform-origin: left;
+  }
+
+  &:active {
+    font-weight: 700;
+    color: $yellow--dark;
+    &::after {
+      transform: scale(0);
+    }
+  }
+
+  &--active {
+    color: $yellow;
+    &::after {
+      transform: scale(1);
+    }
+  }
+}

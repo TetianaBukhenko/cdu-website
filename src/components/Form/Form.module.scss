@@ -1,0 +1,85 @@
+@import '../../styles/styles';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  margin-bottom: 225px;
+
+  @include on-tablet {
+    align-items: center;
+    margin-bottom: 121px;
+  }
+
+  @include on-desktop {
+    margin-bottom: 95px;
+  }
+}
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include on-tablet {
+    width: 696px;
+  }
+
+  @include on-desktop {
+    width: 888px;
+  }
+}
+
+.button {
+  border: none;
+  border-radius: 24px;
+  align-self: center;
+  margin-top: 16px;
+}
+
+.textArea {
+  height: 212px;
+  width: 100%;
+  resize: none;
+  border: 1px solid $black;
+}
+
+.formFiled {
+  background-color: $white-bg;
+  margin-top: 8px;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  padding: 16px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.notValid {
+  border: 2px solid red;
+
+  &__text {
+    color: red;
+  }
+}
+
+label {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+::placeholder {
+  color: #a6aeb7;
+  font-family: 'Figtree', sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.text {
+  font-style: italic;
+  font-size: 13px;
+}

@@ -1,0 +1,77 @@
+.icon {
+  background-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  background-size: contain;
+  mask-size: contain;
+  transition: all 1s;
+
+  &--little {
+    height: 10px;
+    width: 5px;
+  }
+
+  &--small {
+    height: 24px;
+    width: 24px;
+  }
+
+  &--medium {
+    height: 32px;
+    width: 32px;
+  }
+ 
+  &--hover {
+    background-color: $white;
+
+    &:hover {
+      background-color: $yellow;
+      transform: scale(1.2);
+    }
+    
+  }
+
+  &--menu {
+    height: 24px;
+    width: 24px;
+    padding: 10px;
+    background-image: url('../../imgs/icons/menu.svg');
+  }
+
+  &--facebook {
+    -webkit-mask-image: url('../../imgs/icons/facebook.svg');
+    mask-image: url('../../imgs/icons/facebook.svg');
+  }
+
+  &--instagram {
+    -webkit-mask-image: url('../../imgs/icons/instagram.svg');
+    mask-image: url('../../imgs/icons/instagram.svg');
+  }
+
+  &--linkedin {
+    -webkit-mask-image: url('../../imgs/icons/linkedin.svg');
+    mask-image: url('../../imgs/icons/linkedin.svg');
+  }
+
+  &--arrow {
+    background-image: url('../../imgs/icons/arrow.svg');
+  }
+
+  &--location {
+    -webkit-mask-image: url('../../imgs/icons/location.svg');
+    mask-image: url('../../imgs/icons/location.svg');
+  }
+  &--phone {
+    -webkit-mask-image: url('../../imgs/icons/phone.svg');
+    mask-image: url('../../imgs/icons/phone.svg');
+  }
+
+  &--globe {
+    -webkit-mask-image: url('../../imgs/icons/globe.svg');
+    mask-image: url('../../imgs/icons/globe.svg');
+  }
+
+  &--email {
+    -webkit-mask-image: url('../../imgs/icons/email.svg');
+    mask-image: url('../../imgs/icons/email.svg');
+  }
+}

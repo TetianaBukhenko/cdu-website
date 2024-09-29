@@ -1,0 +1,64 @@
+
+@import '../../styles/styles.scss';
+
+.container {
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 2s;
+  width: $news-card-width;
+
+  @include on-desktop {
+    gap: 32px;
+    width: $news-card-width-desktop;
+  }
+}
+
+.img {
+  height: 314px;
+  padding-bottom: 16px;
+
+  @include on-desktop {
+    height: 346px;
+    width: 100%;
+  }
+}
+
+.tag {
+  color: $blue;
+  text-transform: uppercase;
+  font-weight: 700;
+  height: 37px;
+  line-height: 37px;
+  width: 77px;
+  text-align: center;
+
+  border:1px solid $blue;
+  border-radius: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.heading {
+  max-width: 200px;
+}
+
+.date {
+  font-size: 14px;
+  color: $grey;
+}
+
+.mainText {
+  font-size: 14px;
+  line-height: 1.5em;
+
+  @include on-tablet {
+    font-size: 16px;
+  }
+}

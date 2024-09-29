@@ -1,0 +1,69 @@
+@import '../../styles/styles.scss';
+
+.topBar {
+  height: $header-height;
+  padding-block: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $blue;
+  @include padding-inline;
+  box-sizing: border-box;
+
+  &__logo {
+    height: 53px;
+    width: 60px;
+    display: block;
+
+    @include on-desktop {
+      height: 66px;
+      width: 90px;
+    }
+  }
+
+  &__button {
+    display: block;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    width: 160px;
+    border: 1px solid $yellow;
+    text-decoration: none;
+    border-radius: 24px;
+    color: $yellow;
+  }
+
+  &__icon {
+    padding: 10px;
+    margin-right: 19px;
+
+    @include on-tablet {
+      display: none;
+    }
+  }
+}
+
+.nav {
+  display: none;
+
+  @include on-tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 42px;
+  }
+
+  @include on-desktop {
+    gap: 36px;
+  }
+
+  &__item {
+    list-style: none;
+    color: $white;
+  }
+
+
+  &__link {
+    text-decoration: none;
+  }
+}

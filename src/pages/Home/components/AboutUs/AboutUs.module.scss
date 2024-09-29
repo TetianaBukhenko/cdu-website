@@ -1,0 +1,38 @@
+@import '../../../../styles/styles.scss';
+
+.container {
+  padding-inline: 34px;
+
+  @include gap-btw-blocks;
+
+  @include on-tablet {
+    @include page-grid;
+    padding-inline: 70px;
+  }
+}
+
+.text {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include on-desktop {
+    grid-column: span 5;
+  }
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  grid-column: 1 / 4;
+  margin-bottom: 32px;
+
+  @include on-tablet {
+    margin-bottom: 0;
+  }
+
+  @include on-desktop {
+    grid-column: 2 / span 5;
+  }
+}
